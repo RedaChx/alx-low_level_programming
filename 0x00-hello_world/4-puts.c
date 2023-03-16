@@ -2,10 +2,8 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Description: prints "Programming is like building a multilingual puzzle"
- *
+ * main - A program that prints a line with puts functio
+ n
  * Return: Always 0 (Success)
  */
 int main(void)
