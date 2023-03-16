@@ -1,11 +1,6 @@
-#!/bin/bash
 #include <stdio.h>
-
 /**
- * main - print the size of various types
- *
- * Description: prints the size of various types on the computer it is compiled
- * and run on
+ * main - A program that prints the size of various computer types
  *
  * Return: Always 0 (Success)
  */
