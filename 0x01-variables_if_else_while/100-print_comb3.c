@@ -12,17 +12,27 @@
 
 int main(void)
 {
-	int n = 48;
+	int x;
+	int y;
 
-	while (n < 58)
+	x = 48;
+	while (x < 57)
 	{
-		putchar(n);
-		if (n < 57)
+		y = x + 1;
+		while (y < 58)
 		{
-			putchar(44);
-			putchar(32);
+			putchar(x);
+			putchar(y);
+
+			if (x < '8' || y < '9')
+			{
+				putchar(44);
+				putchar(32);
+
+			}
+			y++;
 		}
-		n++;
+		x++;
 	}
 	putchar('\n');
 
