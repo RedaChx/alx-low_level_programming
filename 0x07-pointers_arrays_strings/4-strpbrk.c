@@ -3,7 +3,7 @@
 /**
  * _strpbrk - a function that searches a string for any of a set of bytes
  * @s: string to check
- * @acccept: string with characters to  be checked for
+ * @accept: string with characters to be checked for
  * Return: a pointer to the byte in s that matches one the bytes in acccept,
  * or NULL if no such byte is found
  */
@@ -22,4 +22,4 @@ char *_strpbrk(char *s, char *accept)
 		}
 	}
 	return (0);
-}	
+}
