@@ -10,7 +10,7 @@
   */
 void print_diagsums(int *a, int size)
 {
-	int n = o;
+	int n = 0;
 	int sum1 = 0, sum2 = 0;
 	int sq = size * size;
 
