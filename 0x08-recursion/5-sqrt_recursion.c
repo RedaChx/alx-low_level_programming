@@ -28,6 +28,7 @@ int _sqrt_recursion(int n)
 int sqrt_helper(int n, int low, int high)
 {
 	int mid = (low + high) / 2;
+	int square;
 
 	if (mid == low)
 	{
