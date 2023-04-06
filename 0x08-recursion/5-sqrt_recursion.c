@@ -19,7 +19,7 @@ int check(int a, int b)
 /**
  * _sqrt_recursion - finds the natural square root of a number
  * @n: the integer to find the square root of
- * Retun: the natural square root off n, or -1 if n does not have one
+ * Return: the natural square root of n, or -1 if n does not have one
  */
 int _sqrt_recursion(int n)
 {
