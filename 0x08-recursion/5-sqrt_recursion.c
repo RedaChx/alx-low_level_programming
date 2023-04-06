@@ -1,52 +1,30 @@
 #include "main.h"
 #include <stdio.h>
 
-int sqrt_helper(int n, int low, int high);
+/**
+ * check - checks for the square root
+ * @a: int
+ * @b: int
+ * Return: int
+ */
+int check(int a, int b)
+{
+	if (a * a == b)
+		return (a);
+	if (a * a > b)
+		return (-1);
+	return (check(a + 1, b));
+}
 
 /**
  * _sqrt_recursion - a function that returns the natural square root of
  *a number
  * @n: the number
- * Return: int
+ * Retun: int
  */
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-	{
-		return (-1);
-	}
-	else if (n == 0 || n == 1)
-	{
-		return (n);
-	}
-	else
-	{
-		return (sqrt_helper(n, 0, n));
-	}
-}
-
-int sqrt_helper(int n, int low, int high)
-{
-	int mid = (low + high) / 2;
-	int square;
-
-	if (mid == low)
-	{
-		return (-1);
-	}
-
-	int square = mid * mid;
-
-	if (square == n)
-	{
-		return (mid);
-	}
-	else if (square < n)
-	{
-		return (sqrt_helper(n, mid, high));
-	}
-	else
-	{
-		return (sqrt_helper(n, low, mid));
-	}
+	if (n == 0)
+		return (0);
+	return (check(1, n));
 }
