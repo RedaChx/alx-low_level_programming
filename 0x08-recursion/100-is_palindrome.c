@@ -19,7 +19,7 @@ int is_palindrome(char *s)
 	rev = malloc(len * sizeof(char));
 	if (rev == NULL)
 	{
-		return(0);
+		return (0);
 	}
 
 	for (int i = 0; i < len; i++)
@@ -27,7 +27,7 @@ int is_palindrome(char *s)
 		rev[i] = s[len - i - 1];
 	}
 
-	for(int i = 0; i < len; i++)
+	for (int i = 0; i < len; i++)
 	{
 		if (s[i] != rev[i])
 		{
