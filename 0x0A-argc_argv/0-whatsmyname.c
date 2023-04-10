@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib>
+#include <stdlib.h>
 
 /**
  * main - prints its name, followed by a new line
@@ -10,6 +10,6 @@
  */
 int main(int argc, char **argv)
 {
-	printf("%\n", argv[0]);
-	Return(0);
+	printf("%s\n", argv[0]);
+	return (0);
 }

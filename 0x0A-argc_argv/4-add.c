@@ -10,7 +10,7 @@
  */
 int main(int argc, char **argv)
 {
-	int i, n sum = 0;
+	int i, n, sum = 0;
 	char *flag;
 
 	if (argc < 2)
@@ -22,15 +22,12 @@ int main(int argc, char **argv)
 	for (i = 1; argv[i]; i++)
 	{
 		n = strtol(argv[i], &flag, 10);
-		if (*flag)
+		if (*flag || n <= 0)
 		{
 			printf("Error\n");
 			return (1);
 		}
-		else
-		{
-			sum += n;
-		}
+		sum += n;
 	}
 	printf("%d\n", sum);
 
