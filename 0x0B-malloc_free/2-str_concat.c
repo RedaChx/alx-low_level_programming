@@ -9,7 +9,7 @@
  * Return: a pointer to a newly allocated space in memory of
  * concatenated string. On failure return NULL.
  */
-int *str_concat(char *s1, char *s2)
+char *str_concat(char *s1, char *s2)
 {
 	int i = 0;
 	int j = 0;
