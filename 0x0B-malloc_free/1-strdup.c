@@ -7,13 +7,12 @@
  * @str: the parameter to check
  * Return: string lenght
  */
-int *_strlen(char *str)
+int _strlen(char *str)
 {
 	int len = 0;
 
-	while (*str != '\0')
+	while (str[len] != '\0')
 	{
-		str++;
 		len++;
 	}
 	return len;
@@ -36,12 +35,14 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	n = *_strlen(str);
-	p = malloc(sizeof(*str) * n);
+	n = _strlen(str);
+	p = malloc(sizeof(char) * (n + 1));
 
 	if (p == NULL)
 		return (NULL);
 	for (; i < n; i++)
-		p[i] = *(str + i);
+		p[i] = str[i];
+
+	p[i] = '\0';
 	return (p);
 }
