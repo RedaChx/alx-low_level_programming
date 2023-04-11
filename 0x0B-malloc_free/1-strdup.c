@@ -16,7 +16,7 @@ int *_strlen(char *str)
 		str++;
 		len++;
 	}
-	return (len);
+	return len;
 }
 
 /**
@@ -36,7 +36,7 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	n = _strlen(str);
+	n = *_strlen(str);
 	p = malloc(sizeof(*str) * n);
 
 	if (p == NULL)
