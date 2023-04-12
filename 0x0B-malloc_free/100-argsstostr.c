@@ -28,9 +28,9 @@ char *argsstostr(int ac, char **av)
 
 	int k = 0;
 
-	for (i = 0; i < ac; i++)
+	for (int i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
+		for (int j = 0; av[i][j] != '\0'; j++)
 		{
 			concat_str[k] = av[i][j];
 			k++;
