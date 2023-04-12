@@ -10,25 +10,23 @@
  */
 char *argsstostr(int ac, char **av)
 {
-	char *concat_str;
-	int i, j, k, total_len = 0;
-
-	if (ac == 0 || av == 0)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 0; i < ac; i++)
+	int total_len = 0;
+	for (int i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
+		for (int j = 0; av[i][j] != '\0'; j++)
 			total_len++;
 		total_len++;
 	}
 
-	concat_str = malloc(sizeof(char) * total_len + 1);
+	char *concat_str = malloc(sizeof(char) * (total_len + 1));
 
 	if (concat_str == NULL)
 		return (NULL);
 
-	k = 0;
+	int k = 0;
 
 	for (i = 0; i < ac; i++)
 	{
