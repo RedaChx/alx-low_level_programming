@@ -7,7 +7,7 @@
  * @b: parameter to check
  * Return: void
  */
-void *malloc_checker(unsigned int b)
+void *malloc_checked(unsigned int b)
 {
 	void *p;
 
