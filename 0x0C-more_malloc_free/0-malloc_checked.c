@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * malloc_checker - a function that allocates memory using malloc.
+ * malloc_checked - a function that allocates memory using malloc.
  * @b: parameter to check
  * Return: void
  */
