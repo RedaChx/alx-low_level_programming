@@ -6,7 +6,7 @@
  * @d: pointer to struct
  * Return: nothing
  */
-void free_dog(dog_t *d)
+void free_dog(struct dog *d)
 {
 	if (d != NULL)
 	{
