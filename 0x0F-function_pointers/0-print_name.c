@@ -3,14 +3,13 @@
 
 /**
  * print_name - a function that print a name
- * @name: string name
- * @f: function to pointer
- * 
+ * @name: the name to be printed
+ * @f: a pointer to a function that prints a name
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if (f != NULL)
-	{
-		(f)(name);
-	}
+	if (name == NULL || f == NULL)
+		return;
+
+	f(name);
 }
