@@ -9,23 +9,14 @@
  */
 listint *find_listint_loop(listint *head)
 {
-	listint_t *tortoise = head;
-	listint_t *hare = head;
+	listint_t *temp;
 
-	while (hare && hare->next)
+	while (temp != NULL)
 	{
-		hare = hare->next->next;
-		tortoise = tortoise->next;
-		if (hare == tortoise)
-		{
-			tortoise = head;
-			while (tortoise != hare)
-			{
-				tortoise = tortoise->next;
-				hare = hare->next;
-			}
-			return (tortoise);
-		}
+		temp = head;
+		head = head->next;
+		if ( temp < head)
+			return (head);
 	}
 	return (NULL);
 }
