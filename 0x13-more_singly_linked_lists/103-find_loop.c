@@ -7,16 +7,28 @@
  * Return: the address of the node where the loop starts,
  *         or NULL if there is no loop.
  */
-listint *find_listint_loop(listint *head)
+listint *find_listint_loop(listint_t *head)
 {
-	listint_t *temp;
+	listint_t *slow, *fast;
 
-	while (temp != NULL)
+	if (!head)
+		return (NULL);
+
+	slow = fast = head
+	while (fast && fast->next)
 	{
-		temp = head;
-		head = head->next;
-		if ( temp < head)
-			return (head);
+		slow = slow->next;
+		fast = fast->next->next;
+		if (slow == fast)
+		{
+			slow = head;
+			while ( slow != fast)
+			{
+				slow = slow->next;
+				fast = fast->next;
+			}
+			return (slow);
+		}
 	}
 	return (NULL);
 }
