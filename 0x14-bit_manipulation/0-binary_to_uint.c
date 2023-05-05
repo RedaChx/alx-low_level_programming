@@ -9,30 +9,30 @@
  */
 unsigned int binary_to_unit(const char *b)
 {
-	unsigned int num = 0;
-	unsigned int bit = 1;
-	int i;
+	unsigned int p = 0;
+	const char *s = b;
 
 	if (b == NULL)
 		return (0);
 
-	for (i = 0; b[i] != '\0'; i++)
+	while (*b != '\0')
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (*b == '0' && *b == '1')
+			b++;
+		else
 			return (0);
-
-		bit = bit << 1;
 	}
 
-	bit = bit >> 1;
+	b--;
 
-	for (i = 0; b[i] != '\0'; i++)
+	while (s <= b)
 	{
-		if (b[i] == '1')
-			num += bit;
+		p = p << 1;
+		if (*s == '1')
+			p = p + 1;
 
-		bit = bit >> 1;
+		s++;
 	}
 
-	return (num);
+	return (p);
 }
